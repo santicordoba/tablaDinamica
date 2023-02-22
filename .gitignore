@@ -1,0 +1,28 @@
+# .gitignore file for ASP.NET MVC web project
+
+# Build output
+bin/
+obj/
+
+# NuGet Packages
+*.nuget.props
+*.nuget.targets
+packages/
+
+# ASP.NET Core files
+*.user
+*.vs/
+appsettings.json
+appsettings.Development.json
+launchSettings.json
+
+# Other generated files
+*.suo
+*.cache
+*.log
+*.dll
+*.exe
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
