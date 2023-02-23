@@ -31,10 +31,10 @@
             _cuadro.cuadro[18] = new CuadroLista { OrdenFila = "3", OrdenColumna = "4", Valor = "30" };
             _cuadro.cuadro[19] = new CuadroLista { OrdenFila = "3", OrdenColumna = "5", Valor = "31" };
             _cuadro.cuadro[20] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "1", Valor = "Sub Total" };
-            _cuadro.cuadro[21] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "2", Valor = "1" };
-            _cuadro.cuadro[22] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "3", Valor = "2" };
-            _cuadro.cuadro[23] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "4", Valor = "3" };
-            _cuadro.cuadro[24] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "5", Valor = "4" };
+            _cuadro.cuadro[21] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "2", Valor = "69" };
+            _cuadro.cuadro[22] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "3", Valor = "72" };
+            _cuadro.cuadro[23] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "4", Valor = "75" };
+            _cuadro.cuadro[24] = new CuadroLista { OrdenFila = "3.50", OrdenColumna = "5", Valor = "78" };
             _cuadro.cuadro[25] = new CuadroLista { OrdenFila = "4", OrdenColumna = "1", Valor = "32" };
             _cuadro.cuadro[26] = new CuadroLista { OrdenFila = "4", OrdenColumna = "2", Valor = "33" };
             _cuadro.cuadro[27] = new CuadroLista { OrdenFila = "4", OrdenColumna = "3", Valor = "34" };
@@ -46,10 +46,10 @@
             _cuadro.cuadro[33] = new CuadroLista { OrdenFila = "5", OrdenColumna = "4", Valor = "40" };
             _cuadro.cuadro[34] = new CuadroLista { OrdenFila = "5", OrdenColumna = "5", Valor = "41" };
             _cuadro.cuadro[35] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "1", Valor = "Total" };
-            _cuadro.cuadro[36] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "2", Valor = "1" };
-            _cuadro.cuadro[37] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "3", Valor = "2" };
-            _cuadro.cuadro[38] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "4", Valor = "3" };
-            _cuadro.cuadro[39] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "5", Valor = "4" };
+            _cuadro.cuadro[36] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "2", Valor = "140" };
+            _cuadro.cuadro[37] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "3", Valor = "145" };
+            _cuadro.cuadro[38] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "4", Valor = "150" };
+            _cuadro.cuadro[39] = new CuadroLista { OrdenFila = "5.50", OrdenColumna = "5", Valor = "155" };
 
         }
     }

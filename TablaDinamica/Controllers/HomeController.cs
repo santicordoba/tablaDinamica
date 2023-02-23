@@ -18,7 +18,47 @@ namespace TablaDinamica.Controllers
         public IActionResult Index()
         {
             var cuadro = _tablaService.TraerCuadro();
-            return View(cuadro);
+
+            CuadroViewModel model = new CuadroViewModel();
+            model.DescCuadro = cuadro.descCuadro;
+
+            foreach(var item in cuadro.cuadro)
+            {
+                var celda = (CeldaModel)item;
+                if(model.Filas.Count > 0)
+                {
+                    // Ya se cargo al menos una celda
+
+                    // Verifico que se haya cargado una celda de la misma fila
+                    if(model.Filas.Exists(fila => fila.Id == celda.OrdenFila))
+                    {
+                        // ya se cargo una celda de la misma fila
+                        var fila = model.Filas.Find(fila => fila.Id == celda.OrdenFila);
+                        fila.Columnas.Add(celda);
+                    } else
+                    {
+                        // no se cargo ninguna celda de esta fila
+                        var fila = new FilaModel();
+                        fila.Id = celda.OrdenFila;
+                        fila.EsCabecera = (celda.OrdenFila == "0");
+                        fila.EsTotal = (celda.OrdenFila.Contains(".5"));
+                        fila.Columnas.Add(celda);
+                        model.Filas.Add(fila);
+                    }
+
+                } else
+                {
+                    var fila = new FilaModel();
+                    fila.Id = celda.OrdenFila;
+                    fila.EsCabecera = (celda.OrdenFila == "0");
+                    fila.EsTotal = (celda.OrdenFila.Contains(".5"));
+                    fila.Columnas.Add(celda);
+                    model.Filas.Add(fila);
+                }
+            }
+
+
+            return View(model);
         }
 
         public IActionResult Privacy()

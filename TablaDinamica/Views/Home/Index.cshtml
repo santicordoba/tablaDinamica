@@ -1,19 +1,54 @@
-﻿@model TablaDinamica.Datos.Cuadro;
+﻿@model TablaDinamica.Models.CuadroViewModel;
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Tabla Dinamica</h1>
+    <p>Esta es una tabla dinamica armada de acuerdo a lo recibido por la base, la base retorno un select de celdas con los valores subtotal y total ya calculados</p>
+    <p>Cada celda tiene informacion de la fila la que pertenece por lo tanto se arma un modelo que contengan filas y cada fila tiene un ID y una lista de columnas (las celdas)</p>
 </div>
 
 <table>
     @{
-        foreach(var celda in Model.cuadro)
-        {
-            <td>@celda.OrdenFila</td>
-        }
+
+        <p>@Model.DescCuadro</p>
+        <table>
+        
+            @foreach(var fila in Model.Filas)
+            {
+                if (fila.EsCabecera)
+                {
+                    <thead style="background-color: cornflowerblue; font-weight:bolder">
+                        @foreach(var columna in fila.Columnas)
+                        {
+                            <th>@columna.Valor</th>
+                        }
+                    </thead>
+                } else
+                {
+                    if (fila.EsTotal)
+                    {
+                        <tr style="background-color: aquamarine">
+                            @foreach(var columna in fila.Columnas)
+                            {
+                                <td>@columna.Valor</td>
+                            }
+                        </tr>
+                    } else
+                    {
+                        <tr>
+                            @foreach(var columna in fila.Columnas)
+                            {
+                                <td>@columna.Valor</td>
+                            }
+                        </tr>
+                    }
+                }
+                
+            }
+
+        </table>
     }
 </table>
